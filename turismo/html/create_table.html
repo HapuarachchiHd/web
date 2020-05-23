@@ -1,0 +1,52 @@
+<html>
+<body>
+
+<form action="create_table.php" method="POST">
+  <input type="text" placeholder="idpoi" name="idpoi" ><br>
+  <input type="text" placeholder="nome" name="nome" ><br><br>
+  <input type="text" placeholder="indirizzo" name="indirizzo" ><br><br>
+  <input type="text"  placeholder="voto media" name="voto_media">
+  <input type="submit" value="poii">
+</form>
+
+
+</body>
+</html>
+
+<?php
+
+$hostname = "localhost";  //mysql -h 127.0.0.1 -u root -p
+$username = "root";
+$passwd = "";
+$dbname = "turismo";
+         //connezione al database
+$sql = mysqli_connect($hostname,$username,$passwd,$dbname);
+
+if(!$sql){
+    die("connesione e' fallito".mysqli_connect_error());
+
+}
+   $nome=$_POST['nome'];
+  $indirizzo=$_POST['indirizzo'];
+  $idpoi=$_POST['idpoi'];
+  $voto_media=$_POST['voto_media'];
+ $poii=$_POST["poii"];
+
+if($poi="poii"){
+//if(isset ($poi["poi"])){
+//prendere variabile dal form di html
+
+
+         //inserimento di dati
+$insert = "INSERT INTO `poi`(`idpoi`, `nome`, `indirizzo`, `voto_media`)  VALUES  ('$idpoi','$nome' ,'$indirizzo' ,'$voto_media') ";
+
+}
+     //se dati salvata in data base
+if($sql->query($insert)===true){
+    echo "salvato i dati";
+}else{
+    echo "errore".$insert."<br>".$sql->$insert;
+}
+$sql->close();
+
+?>

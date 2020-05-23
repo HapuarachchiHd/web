@@ -1,0 +1,53 @@
+  
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+div{
+    position: relative;
+    text-align: center;
+    position: relative;
+    border: ridge rgb(134, 134, 134) 5px;
+    border-radius: 20px;
+    left: 30%;
+    width:30%;
+    margin-top: 5%;
+} 
+input{
+    margin: 2%;
+    text-align: center;
+    width: 80%;
+    height: 30px;
+    border: none;
+    border-bottom: solid gray 2px;
+    border-radius: 10px;
+}
+.log{
+    height:40px;
+    font-size: larger;
+    background-color: rgb(185, 139, 223);
+    border: none;
+    box-shadow: 3px 3px 6px 3px;
+    transition: 1s;
+    margin-bottom: 80px;
+}
+.log:hover{
+    transform: scale(1.05);
+    box-shadow: 3px 3px 5px 2px;
+}
+p{
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    bottom: 0;
+    right: 0;
+}
+a{
+    text-decoration: none; 
+    transition: 2s;
+}
+a:hover{
+    color: brown;
+    font-size: 110%;
+}
+       

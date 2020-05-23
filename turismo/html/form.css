@@ -1,0 +1,65 @@
+div{
+    text-align: center;
+    font-family: cursive;
+    position: relative;
+    border: ridge gold 5px;
+    left: -50%;
+    width: 50%;
+    margin-top: 5%;
+ 
+}
+.N{
+    border: ridge white 5px;
+}
+@keyframes slide{
+    100%{
+        left: calc(25% - 5px);
+    }
+}
+
+.info{
+    text-align: center;
+    animation: info forwards 2s ease;
+}
+
+@keyframes info{
+    0%{
+        transform: scale(1.5);
+    }
+    50%{
+        transform: scale(.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+form{
+    text-align: center;
+}
+
+input{
+    text-align: center;
+    height: 40px;
+    width: 90%;
+    margin: 2%;
+    border-radius: 30px;
+    border: ridge silver 3px;
+
+}
+
+.bot{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10%;
+    transition: 1s;
+}
+
+.bot:hover{
+    background-image: linear-gradient(to right, gold, rgb(223, 236, 161));
+    transform: scale(1.1);
+}
+body {
+  background-image: url("https://assets.entrepreneur.com/content/3x2/1300/20160310184227-travel-vacation-outside-relaxation.jpeg");
+
+  height: 100%;
+}
